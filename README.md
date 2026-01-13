@@ -1,73 +1,102 @@
-# React + TypeScript + Vite
+# 🚀 My Landing — React + TypeScript Practice
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19.x-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-6.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-Responsive-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Навчальний проект для практики React, TypeScript та адаптивної верстки**
 
-## React Compiler
+[Демо](#) • [Компоненти](#-компоненти) • [Запуск](#-швидкий-старт) • [Навчання](#-що-я-вивчаю)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+</div>
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📖 Про проект
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Цей проект створений з метою **практики та закріплення знань** з:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- ⚛️ **React** — компонентний підхід, хуки, стан
+- 📘 **TypeScript** — типізація, інтерфейси
+- 🎨 **CSS** — адаптивна верстка, Flexbox, Grid, анімації
+- 📱 **Responsive Design** — мобільна адаптація
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+> 💡 Проект постійно розвивається — додаються нові компоненти та функціонал
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Технології
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Технологія | Версія | Опис |
+|------------|--------|------|
+| React | 19.x | UI бібліотека |
+| TypeScript | 5.x | Типізація JavaScript |
+| Vite | 6.x | Збірник та dev-сервер |
+| CSS3 | — | Стилізація (без фреймворків) |
+| ESLint | 9.x | Лінтер коду |
+
+---
+
+## 📁 Структура проекту
+
+src/
+├── assets/ # Зображення, шрифти
+├── components/ # React компоненти
+│ ├── Header/
+│ │ ├── Header.tsx
+│ │ └── Header.css
+│ ├── Hero/
+│ │ ├── Hero.tsx
+│ │ └── Hero.css
+│ ├── Benefits/
+│ │ ├── Benefits.tsx
+│ │ └── Benefits.css
+│ └── Footer/
+│ ├── Footer.tsx
+│ └── Footer.css
+├── App.tsx # Головний компонент
+├── App.css # Стилі App
+├── main.tsx # Точка входу
+└── index.css # Глобальні стилі
+
+
+---
+
+## 🧩 Компоненти
+
+| Компонент | Опис | Статус |
+|-----------|------|--------|
+| `Header` | Навігація з бургер-меню | ✅ Готово |
+| `Hero` | Головна секція з CTA | ✅ Готово |
+| `Benefits` | Картки переваг | ✅ Готово |
+| `Footer` | Підвал сайту | ✅ Готово |
+| `Stats` | Статистика в цифрах | 🔜 Планується |
+| `FAQ` | Часті запитання | 🔜 Планується |
+| `Contact` | Форма зворотного зв'язку | 🔜 Планується |
+
+---
+
+## 🚀 Швидкий старт
+
+### Вимоги
+
+- Node.js 18+
+- npm або yarn
+
+### Встановлення
+
+```bash
+# Клонувати репозиторій
+git clone https://github.com/your-username/my-landing.git
+
+# Перейти в папку проекту
+cd my-landing
+
+# Встановити залежності
+npm install
+
+# Запустити dev-сервер
+npm run dev
