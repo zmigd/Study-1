@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import './Header.css';
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "./Header.css";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,24 +16,34 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container">
-        <a href='/' className="header__logo">My Landing</a>
-        
+        <NavLink to="/" className="header__logo" onClick={closeMenu}>
+          My Landing
+        </NavLink>
+
         {/* Overlay для закриття меню */}
-        <div 
-          className={`header__overlay ${isMenuOpen ? 'active' : ''}`}
+        <div
+          className={`header__overlay ${isMenuOpen ? "active" : ""}`}
           onClick={closeMenu}
         />
-        
+
         {/* Навігація */}
-        <nav className={`header__nav ${isMenuOpen ? 'active' : ''}`}>
-          <a href="/" className="header__link" onClick={closeMenu}>Home</a>
-          <a href="#benefits" className="header__link" onClick={closeMenu}>Benefits</a>
-          <a href="#contact" className="header__link" onClick={closeMenu}>Contact</a>
+        <nav className={`header__nav ${isMenuOpen ? "active" : ""}`}>
+          <NavLink to="/" className="header__link" onClick={closeMenu}>
+            Home
+          </NavLink>
+
+          <NavLink to="/about" className="header__link" onClick={closeMenu}>
+            About
+          </NavLink>
+
+          <NavLink to="/contacts" className="header__link" onClick={closeMenu}>
+            Contact
+          </NavLink>
         </nav>
-        
+
         {/* Бургер кнопка */}
-        <div 
-          className={`header__burger ${isMenuOpen ? 'active' : ''}`}
+        <div
+          className={`header__burger ${isMenuOpen ? "active" : ""}`}
           onClick={toggleMenu}
         >
           <span></span>
